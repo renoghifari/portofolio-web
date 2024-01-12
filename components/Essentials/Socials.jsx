@@ -1,24 +1,24 @@
 "use client"
 
 import React from 'react'
-import { RiFacebookFill, RiLinkedinFill, RiInstagramLine, RiGithubLine } from 'react-icons/ri'
+import { RiMailLine, RiLinkedinFill, RiInstagramLine, RiGithubLine } from 'react-icons/ri'
 import Link from 'next/link'
 
 const icons = [
     {
-        path: '/',
-        name: <RiFacebookFill/>
+        URL: '/',
+        name: <RiMailLine/>
     },
     {
-        path: '/',
+        URL: 'https://linkedin.com/in/renoghifari/',
         name: <RiLinkedinFill/>
     },
     {
-        path: '/',
+        URL: 'https://instagram.com/renoghifarii_',
         name: <RiInstagramLine/>
     },
     {
-        path: '/',
+        URL: 'https://github.com/renoghifari',
         name: <RiGithubLine/>
     }
 ]
@@ -28,7 +28,7 @@ const Socials = ({ containerStyles, iconsStyles }) => {
     <div className={`${containerStyles}`}>
         {icons.map((icon, index) => {
             return (
-                <Link href={icon.path} key={index}>
+                <Link href={icon.URL} key={index}>
                     <div className={`${iconsStyles}`}>{icon.name}</div>
                 </Link>
             )
